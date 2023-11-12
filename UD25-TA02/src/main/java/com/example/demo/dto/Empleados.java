@@ -28,13 +28,14 @@ public class Empleados {
 
 	public Empleados(){
 	}
-	//@param id - @param nombre - @param precio - @param codigo_fabricante
-	public Empleados(String dni, String nombre, String apellidos) {
-		//super();
+	//@param dni - @param nombre - @param apellidos - @param codigo_departamento
+	public Empleados(String dni, String nombre, String apellidos, Departamentos departamentos) {
+		super();
 		this.dni = dni;
 		this.nombre = nombre;
 		this.apellidos = apellidos;
-	}	
+		this.departamentos = departamentos;
+	}
 	//Getters y setters
 	public String getDni() {
 		return dni;
@@ -54,13 +55,18 @@ public class Empleados {
 	public void setApellidos(String apellidos) {
 		this.apellidos = apellidos;
 	}
+	public Departamentos getDepartamentos() {
+		return departamentos;
+	}
+	public void setDepartamentos(Departamentos departamentos) {
+		this.departamentos = departamentos;
+	}
+	
 	//Método String
 	@Override
 	public String toString() {
 		return "Empleados [dni=" + dni + ", nombre=" + nombre + ", apellidos=" + apellidos + "]";
 	}
-	
-	
 	
 	
 }

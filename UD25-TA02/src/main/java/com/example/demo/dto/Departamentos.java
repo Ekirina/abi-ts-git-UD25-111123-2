@@ -15,10 +15,10 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name ="departamentos")
 public class Departamentos {
-	//Atributos de la entidad fabricante
+	//Atributos de la entidad departamento
 	@Id
 	//@GeneratedValue(strategy = GenerationType.IDENTITY)//busca último valor e incrementa desde la id final del db
-	private int codigo;
+	private short codigo;
 	@Column(name = "nombre")
 	private String nombre;
 	@Column(name= "presupuesto")
@@ -34,19 +34,18 @@ public class Departamentos {
 
 	}
 	//En el anterior ejercicio eliminé el de articulos, con la lista incluida.
-	public Departamentos(int codigo, String nombre, int presupuesto, List<Empleados> empleados) {
+	public Departamentos(Short codigo, String nombre, int presupuesto) {
 		//super();
 		this.codigo = codigo;
 		this.nombre = nombre;
 		this.presupuesto = presupuesto;
-		this.empleados = empleados;
 	}
 
 	//Getters y setters:
 	public int getCodigo() {
 		return codigo;
 	}
-	public void setCodigo(int codigo) {
+	public void setCodigo(Short codigo) {
 		this.codigo = codigo;
 	}
 	public String getNombre() {
